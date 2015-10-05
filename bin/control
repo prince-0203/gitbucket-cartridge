@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 
 function start() {
-  java -jar $OPENSHIFT_GITBUCKET_DIR/war/gitbucket.war \
-       --port=$OPENSHIFT_GITBUCKET_HTTP_PORT \
-       --host==$OPENSHIFT_GITBUCKET_HTTP_HOST \
-       --gitbucket.home=$OPENSHIFT_GITBUCKET_DIR/home \
-       --prefix=$OPENSHIFT_GITBUCKET_DIR/war/ >> $OPENSHIFT_GITBUCKET_DIR/log/gitbucket.log
+  nohup java -jar ${OPENSHIFT_GITBUCKET_DIR}war/gitbucket.war --port=$OPENSHIFT_GITBUCKET_HTTP_PORT --host==$OPENSHIFT_GITBUCKET_HTTP_IP --gitbucket.home=${OPENSHIFT_GITBUCKET_DIR}home > ${OPENSHIFT_GITBUCKET_DIR}log/gitbucket.log &
   return 0
 }
 
