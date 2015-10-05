@@ -1,0 +1,33 @@
+Name: gitbucket
+Source-Url: git@github.com:mocchit/gitbucket-cartridge.git
+
+Cartridge-Short-Name: gitbucket
+Cartridge-Version: '0.0.1'
+Cartridge-Vendor: mocchi
+
+Display-Name: GitBucket 3.7
+Description: Git Hosting Service
+
+Version: '3.7'
+Website: https://gitbucket.github.io/gitbucket-news/
+
+Categories:
+  - service
+  - web_framework
+
+Provides:
+- gitbucket
+
+Scaling:
+  Min: 1
+  Max: -1
+
+Endpoints:
+  - Private-IP-Name:   HTTP_IP
+    Private-Port-Name: HTTP_PORT
+    Private-Port:      8080
+    Public-Port-Name:  PROXY_HTTP_PORT
+    Mappings:
+      - Frontend:      ""
+        Backend:       ""
+        Options:       { websocket: false }

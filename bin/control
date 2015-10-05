@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+function start() {
+  java -jar $OPENSHIFT_GITBUCKET_DIR/war/gitbucket.war \
+       --port=$OPENSHIFT_GITBUCKET_HTTP_PORT \
+       --host==$OPENSHIFT_GITBUCKET_HTTP_HOST \
+       --gitbucket.home=$OPENSHIFT_GITBUCKET_DIR/home \
+       --prefix=$OPENSHIFT_GITBUCKET_DIR/war/ >> $OPENSHIFT_GITBUCKET_DIR/log/gitbucket.log
+  return 0
+}
+
+function stop() {
+  pkill java
+  return 0
+}
+
+function status(){
+  return 0  [ -n "$(pgrep java)" ] && return 0 || return 1
+}
+
+function restart(){
+  return start && stop
+}
+
+function update() {
+  return 0
+}
+
+function tidy() {
+  return 0
+}
+
+function build() {
+  return 0
+}
+
+function pre-build(){
+ return 0
+}
+
+function post-deploy(){
+  return 0
+}
+
+if ! [ $# -gt 0 ]; then
+  echo "Usage: $0 [start|restart|graceful|graceful-stop|stop|status|update]"
+  exit 1
+fi
+
+case "$1" in
+  start) start ;;
+  restart|graceful) restart ;;
+  graceful-stop|stop) stop ;;
+  status) status ;;
+  build) build ;;
+  pre-build) pre-build ;;
+  post-deploy) post-deploy ;;
+  tidy) tidy ;;
+  update) update ;;
+  *)
+esac

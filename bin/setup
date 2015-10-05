@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd $OPENSHIFT_GITBUCKET_DIR
+mkdir war
+cd war
+wget https://github.com/takezoe/gitbucket/releases/download/3.7/gitbucket.war
