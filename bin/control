@@ -15,7 +15,9 @@ function status(){
 }
 
 function restart(){
-  return start && stop
+  stop
+  start
+  return 0
 }
 
 function update() {
