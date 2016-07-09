@@ -3,4 +3,4 @@
 cd $OPENSHIFT_GITBUCKET_DIR
 mkdir war
 cd war
-wget https://github.com/takezoe/gitbucket/releases/download/3.7/gitbucket.war
+wget https://github.com/gitbucket/gitbucket/releases/download/4.2.1/gitbucket.war

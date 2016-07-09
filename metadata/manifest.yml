@@ -1,14 +1,14 @@
 Name: gitbucket
-Source-Url: git@github.com:mocchit/gitbucket-cartridge.git
+Source-Url: git@github.com:prince-0203/gitbucket-cartridge.git
 
 Cartridge-Short-Name: gitbucket
-Cartridge-Version: '0.0.1'
-Cartridge-Vendor: mocchi
+Cartridge-Version: '0.0.2'
+Cartridge-Vendor: prince
 
-Display-Name: GitBucket 3.7
+Display-Name: GitBucket 4.2.1
 Description: Git Hosting Service
 
-Version: '3.7'
+Version: '4,2,1'
 Website: https://gitbucket.github.io/gitbucket-news/
 
 Categories:
