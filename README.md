@@ -2,11 +2,8 @@
 
 # Using
 ```
-rhc create-app gitbucket 'http://cartreflect-claytondev.rhcloud.com/reflect?github=mocchit/gitbucket-cartridge'
+rhc create-app gitbucket 'http://cartreflect-claytondev.rhcloud.com/reflect?github=prince-0203/gitbucket-cartridge'
 ```
 
-# Sample
-<http://gitbucket-mocchi.rhcloud.com/>
-
 # GitBucket
-<https://github.com/takezoe/gitbucket>
+<https://github.com/gitbucket/gitbucket>
